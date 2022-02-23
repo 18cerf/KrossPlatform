@@ -18,7 +18,7 @@ public class TaskFive {
         System.out.println("Введите кол-во уровней:");
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
-        Meth();
+        Meth(a);
     }
 }
 
