@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class TaskSevenTwo {
+public class TaskSevenTwentynine {
     static int countSubarrays(int sum, int... arr) {
         int count = 0;
         int biggest = 0;

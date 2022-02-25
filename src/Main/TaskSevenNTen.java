@@ -7,7 +7,7 @@ import java.io.*;
 import java.sql.Array;
 import java.util.Scanner;
 
-class TaskSeven {
+class TaskSevenNTen {
     // функция для поиска
     // локальный экстремум
     static int extremMin(int a[], int n) {
