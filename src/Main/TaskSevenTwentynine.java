@@ -8,7 +8,7 @@ public class TaskSevenTwentynine {
     static int countSubarrays(int sum, int... arr) {
         int count = 0;
         int biggest = 0;
-        int a=0, b=0;
+        int a = 0, b = 0;
         int n = arr.length;
         for (int i = 0; i < n; i++) {
             int subTotal = 0;
@@ -17,10 +17,10 @@ public class TaskSevenTwentynine {
                 if (subTotal == sum) {
                     count++;
                     System.out.println(subArr(i, j, arr));
-                    if(j-i>biggest) {
-                        biggest = j-i+1;
-                    a=i;
-                    b=j;
+                    if (j - i > biggest) {
+                        biggest = j - i + 1;
+                        a = i;
+                        b = j;
                     }
                 }
             }
