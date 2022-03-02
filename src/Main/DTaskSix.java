@@ -3,23 +3,23 @@ package Main;
 import java.util.Scanner;
 
 public class DTaskSix {
-    private static double arctg(double x, int eps) {
+    private static double arctg(double x, int step) {
         if (Math.abs(x) >= 1) {
             throw new IllegalArgumentException("|x| не может быть < 1");
         }
         double result = 0.0;
-        for (int i = 0; i < eps; i++) {
+        for (int i = 0; i < step; i++) {
             result += (Math.pow(-1, i) / (2 * i + 1)) * Math.pow(x, (2 * i + 1));
         }
         return result;
     }
 
-    private static double arctg2(double x, int eps) {
+    private static double arctg2(double x, int step) {
         if (Math.abs(x) >= 1) {
             throw new IllegalArgumentException("|x| не может быть < 1");
         }
         double result = 0.0;
-        for (int i = 0; i < eps; i++) {
+        for (int i = 0; i < step; i++) {
             if ((Math.pow(-1, i) / (2 * i + 1)) * Math.pow(x, (2 * i + 1)) > 2.7)
                 result += (Math.pow(-1, i) / (2 * i + 1)) * Math.pow(x, (2 * i + 1));
         }
@@ -27,12 +27,12 @@ public class DTaskSix {
     }
 
 
-    private static double arctg3(double x, int eps) {
+    private static double arctg3(double x, int step) {
         if (Math.abs(x) >= 1) {
             throw new IllegalArgumentException("|x| не может быть < 1");
         }
         double result = 0.0;
-        for (int i = 0; i < eps; i++) {
+        for (int i = 0; i < step; i++) {
             if ((Math.pow(-1, i) / (2 * i + 1)) * Math.pow(x, (2 * i + 1)) > 2.7 / 10)
                 result += (Math.pow(-1, i) / (2 * i + 1)) * Math.pow(x, (2 * i + 1));
         }

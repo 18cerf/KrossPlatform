@@ -1,15 +1,10 @@
 package Main;
 
-// Java для поиска
-// номер экстремума
-
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.io.*;
-import java.sql.Array;
-import java.util.Scanner;
 
 class TaskSevenNTen {
-    // функция для поиска
-    // локальный экстремум
     static int extremMin(int a[], int n) {
         int countMin = 0;
 
@@ -45,16 +40,20 @@ class TaskSevenNTen {
         return countMax;
     }
 
-    public static void main(String args[])
-            throws IOException {
-
-        int arr[] = {5, 1, 3, 3, 1, 7};
+    public static void main(String args[]) {
+        Random random = ThreadLocalRandom.current();
+        int[] arr = random.ints(6, -5, 10).toArray();
+        System.out.println("Массив:");
+        for (int x :arr
+             ) {
+            System.out.print(x+" ");
+        }
         int n = arr.length;
 
         System.out.println();
 
-        System.out.println("Min: " + extremMin(arr, n));
-        System.out.println("Max: " + extremMax(arr, n));
+        System.out.println("Локальный минимум: " + extremMin(arr, n));
+        System.out.println("Локальный максимум: " + extremMax(arr, n));
     }
 
 }
